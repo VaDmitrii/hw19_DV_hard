@@ -1,4 +1,4 @@
-from dao.model.movie import Movie
+from hw19_DV_hard.dao.model.movie import Movie
 
 
 class MovieDAO:

@@ -1,4 +1,4 @@
-from dao.genre import GenreDAO
+from hw19_DV_hard.dao.genre import GenreDAO
 
 
 class GenreService:

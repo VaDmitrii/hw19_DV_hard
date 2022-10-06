@@ -1,4 +1,4 @@
-from dao.movie import MovieDAO
+from hw19_DV_hard.dao.movie import MovieDAO
 
 
 class MovieService:

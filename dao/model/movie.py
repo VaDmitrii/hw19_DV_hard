@@ -1,6 +1,4 @@
-from marshmallow import Schema, fields
-
-from setup_db import db
+from hw19_DV_hard.setup_db import db
 
 
 class Movie(db.Model):
@@ -15,12 +13,3 @@ class Movie(db.Model):
     genre = db.relationship("Genre")
     director_id = db.Column(db.Integer, db.ForeignKey("director.id"))
     director = db.relationship("Director")
-
-
-class MovieSchema(Schema):
-    id = fields.Int()
-    title = fields.Str()
-    description = fields.Str()
-    trailer = fields.Str()
-    year = fields.Int()
-    rating = fields.Float()
