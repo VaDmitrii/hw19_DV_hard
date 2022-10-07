@@ -28,6 +28,7 @@ class AuthsView(Resource):
         if None in [username, password]:
             return "", 401
 
+
         tokens = auth_service.generate_tokens(username, password)
 
         return tokens, 201

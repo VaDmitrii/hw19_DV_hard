@@ -28,6 +28,7 @@ class UserService:
         self.dao.update(user_data)
 
     def get_hash(self, password):
+
         hash_digest = hashlib.pbkdf2_hmac(
             'sha256',
             password.encode('utf-8'),  # Convert the password to bytes
@@ -35,7 +36,7 @@ class UserService:
             PWD_HASH_ITERATIONS
         )
 
-        return str(base64.b64encode(hash_digest))
+        return base64.b64encode(hash_digest)
 
     def compare_passwords(self, password_hash, other_password) -> bool:
         decoded_digest = base64.b64decode(password_hash)
